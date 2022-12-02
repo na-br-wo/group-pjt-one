@@ -5,24 +5,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- bulma links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <!-- css & js -->
+    <link rel="stylesheet" href="assets/style.css">
+    <script defer src="assets/script.js"></script>
 </head>
 <body>
     
     <!-- header -->
+    <header>D&D Spell Tool</header>
 
-    <!-- 
-        section
-        dice
-        dice history
-    -->
+    <!-- dice icons -->
+    <div class="dice">
+        <button class="d4"></button>
+        <button class="d6"></button>
+        <button class="d8"></button>
+        <button class="d10"></button>
+        <button class="d12"></button>
+        <button class="d20"></button>
+        <button class="d100"></button>
+    </div>
 
-    <!-- 
-        search bar
-        displaying spell data
-    -->
+    <!-- dice results -->
+    <div class="diceResults">
+        <p class="results"></p>
+        <button class="roll"></button>
+        <button class="diceHistory"></button>
+        <!-- UL list for drop down -->
+    </div>
+
+    <!-- search bar -->
+    <form action="" class="searchBar">
+        <input type="text" name="" id="">
+        <button class="searchButton"></button>
+    </form>
+
+    <!-- spell info displayed -->
+    <div class="spellInfo dropdown is-active">
+        <!-- dependent on css framework or a table -->
+        <div class="dropdown-trigger">
+            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+              <span>Dropdown button</span>
+              <span class="icon is-small">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </button>
+          </div>
+          <div class="dropdown-menu" id="dropdown-menu" role="menu">
+            <div class="dropdown-content">
+              <a href="#" class="dropdown-item">
+                Dropdown item
+              </a>
+              <a class="dropdown-item">
+                Other dropdown item
+              </a>
+              <a href="#" class="dropdown-item">
+                Active dropdown item
+              </a>
+              <a href="#" class="dropdown-item">
+                Other dropdown item
+              </a>
+              <hr class="dropdown-divider">
+              <a href="#" class="dropdown-item">
+                With a divider
+              </a>
+            </div>
+          </div>
+    </div>
     
     <!-- footer -->
-
+    <footer>
+        <p>idk</p>
+    </footer>
 
 </body>
 </html>
