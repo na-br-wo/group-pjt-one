@@ -1,8 +1,10 @@
+
 // var dropdown = document.querySelector('.dropdown');
 // dropdown.addEventListener('click', function(event) {
 //   event.stopPropagation();
 //   dropdown.classList.toggle('is-active');
 // });
+
 
 /* adding scripting for spell search API */
 
@@ -12,6 +14,7 @@ let searchBtnClick = document.getElementById('search-button');
 
 // event listener to create drop-down menu when user types anything
 // in search bar
+
 // searchInput.addEventListener('input', (e) => {
 //   const value = e.target.value;
 //   console.log(value);
@@ -22,12 +25,16 @@ searchBtnClick.addEventListener('click', (e) => {
   // preventing refresh of page on button click
   e.preventDefault();
 
+
   // taking user input in search bar, replacing any hyphens with spaces
   // so hyphenated search can be appended to API link
   let inputArray = searchInput.value;
   let removeSpace = inputArray.split(" ");
   let addHyphen = removeSpace.join("-");
   let caseCorrect = addHyphen.toLowerCase();
+
+
+
   spellSearch(caseCorrect);
 });
 
