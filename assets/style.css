@@ -79,13 +79,13 @@ body {
 }
 
 
-.searchBar {
+.searchBarWrapper {
     width: 50%;
     align-self: center;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    background: ;
+    background: lightblue;
     margin: 1%;
     border: solid 2px black;
     padding: 5%;
@@ -94,6 +94,7 @@ body {
 
 .searchButton {
     padding: 2%;
+    margin-top: 2px;
 
 }
 

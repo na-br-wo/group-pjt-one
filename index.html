@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Document</title>
+    <title>D&D Spell Tool</title>
     <!-- bulma links -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <!-- update kit to include more relevent icons (grey) -->
@@ -14,48 +14,48 @@
     <script defer src="assets/script.js"></script>
 </head>
 <body>
-    
+
     <!-- header -->
     <header class="mainHeader">D&D Spell Tool</header>
 
     <!-- dice icons -->
     <div class="diceSet">
         <button class="diceContainer button">
-            <img src="./assets/Dice 4.svg" alt="D4">
+            <img src="./assets/images/Dice 4.svg" alt="D4">
         </button>
         <button class="diceContainer button">
-            <img src="./assets/Dice 6 (1).svg" alt="D6">
+            <img src="./assets/images/Dice 6.svg" alt="D6">
         </button>
         <button class="diceContainer button">
-            <img src="./assets/Dice 8.svg" alt="D8">
+            <img src="./assets/images/Dice 8.svg" alt="D8">
         </button>
         <button class="diceContainer button">
-            <img src="./assets/Dice 10.svg" alt="D10">
+            <img src="./assets/images/Dice 10.svg" alt="D10">
         </button>
         <button class="diceContainer button">
-            <img src="./assets/Dice 12.svg" alt="D12">
+            <img src="./assets/images/Dice 12.svg" alt="D12">
         </button>
         <button class="diceContainer button">
-            <img src="./assets/Dice 20.svg" alt="D20">
+            <img src="./assets/images/Dice 20.svg" alt="D20">
         </button>
         <button class="diceContainer button">
-            <img src="./assets/Dice 100.svg" alt="D100">
-        </button> 
+            <img src="./assets/images/Dice 100.svg" alt="D100">
+        </button>
     </div>
 
     <!-- dice results -->
     <div class="diceResults">
         <button  class="roll button">Roll</button>
-        <p class="results">Results</p>
+        <p class="results">Dice Rolls</p>
 
         <!-- UL list for drop down -->
     </div>
 
     <!-- search bar -->
-    <form action="" class="searchBar">
-        <input type="text" name="" id="">
-        <button class="searchButton">Spell Search</button>
-    </form>
+    <div class="searchBarWrapper">
+        <input type="text"  id="search">
+        <button class="searchButton" id="search-button">Spell Search</button>
+    </div>
 
     <!-- spell info displayed -->
     <div id="dropDown" class="spellInfo dropdown is-active">
@@ -71,7 +71,7 @@
 
           </div>
     </div>
-    
+
     <!-- footer -->
     <footer>
 
