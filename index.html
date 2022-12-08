@@ -10,63 +10,80 @@
     <!-- update kit to include more relevent icons (grey) -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <!-- css & js -->
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="style.css">
     <script defer src="assets/script.js"></script>
 </head>
 <body>
     
     <!-- header -->
-    <header>D&D Spell Tool</header>
+    <header><h1 class="title is-1 has-text-centered">D&D Spell Tool</h1></header>
 
     <!-- dice icons -->
     <div class="dice">
-        <button class="d4"></button>
-        <button class="d6"></button>
-        <button class="d8"></button>
-        <button class="d10"></button>
-        <button class="d12"></button>
-        <button class="d20"></button>
-        <button class="d100"></button>
-    </div>
+        <div class="container is-max-widescreen has-text-centered ">
+            <div class="notification is-primary">
+        <button class="d4">d4</button>
+        <button class="d6">d6</button>
+        <button class="d8">d8</button>
+        <button class="d10">d10</button>
+        <button class="d12">d12</button>
+        <button class="d20">d20</button>
+        <button class="d100">d100</button>
+      
+    
+
+
 
     <!-- dice results -->
+  
+      
     <div class="diceResults">
-        <p class="results"></p>
-        <button class="roll"></button>
-        <button class="diceHistory"></button>
+        <p class="results">Results</p>
+        <button class="roll">Roll</button>
+        
         <!-- UL list for drop down -->
+        <div class="panel is-primary" >
+          <div class="spellInfo dropdown is-active">
+              <!-- dependent on css framework or a table -->
+              <div class="dropdown-trigger">
+                  <button class="button" aria-haspopup="false" aria-controls="dropdown-menu">
+                    <span>History</span>
+                    <span class="icon is-small">
+                      <i class="fas fa-dice-d8" aria-hidden="true"></i>
+                    </span>
+                  </button>
+                </div>
+                <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                  <div class="dropdown-content">
+                    <a href="#" class="dropdown-item">
+                      refrence element / place holder
+                    </a>
+                  </div>
+                </div>
+          </div>
+        </div>
     </div>
-
+  </div>
+</div>
     <!-- search bar -->
+    <div class="has-text-centered container is-max-widescreen notification is-primary mt-6">
     <form action="" class="searchBar">
         <input type="text" name="" id="">
-        <button class="searchButton"></button>
+        <button class="searchButton">Search</button>
     </form>
-
-    <!-- spell info displayed -->
-    <div class="spellInfo dropdown is-active">
-        <!-- dependent on css framework or a table -->
-        <div class="dropdown-trigger">
-            <button class="button" aria-haspopup="false" aria-controls="dropdown-menu">
-              <span>Dropdown button</span>
-              <span class="icon is-small">
-                <i class="fas fa-dice-d8" aria-hidden="true"></i>
-              </span>
-            </button>
-          </div>
-          <div class="dropdown-menu" id="dropdown-menu" role="menu">
-            <div class="dropdown-content">
-              <a href="#" class="dropdown-item">
-                refrence element / place holder
-              </a>
-            </div>
-          </div>
-    </div>
     
+    <!-- spell info displayed -->
+   
+  </div>
     <!-- footer -->
-    <footer>
-        <p>idk</p>
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          <strong>D&D Spell Tool</strong> by <a href="https://jgthms.com">Jose Orozco, Grey Pearson, Amanda Paul, and Nathan Wood </a>. The source code is licensed
+          <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+          is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+        </p>
+      </div>
     </footer>
-
 </body>
 </html>
