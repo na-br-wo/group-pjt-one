@@ -16,56 +16,67 @@
 <body>
     
     <!-- header -->
-    <header>D&D Spell Tool</header>
+    <header class="mainHeader">D&D Spell Tool</header>
 
     <!-- dice icons -->
-    <div class="dice">
-        <button class="d4"></button>
-        <button class="d6"></button>
-        <button class="d8"></button>
-        <button class="d10"></button>
-        <button class="d12"></button>
-        <button class="d20"></button>
-        <button class="d100"></button>
+    <div class="diceSet">
+        <button class="diceContainer button">
+            <img src="./assets/Dice 4.svg" alt="D4">
+        </button>
+        <button class="diceContainer button">
+            <img src="./assets/Dice 6 (1).svg" alt="D6">
+        </button>
+        <button class="diceContainer button">
+            <img src="./assets/Dice 8.svg" alt="D8">
+        </button>
+        <button class="diceContainer button">
+            <img src="./assets/Dice 10.svg" alt="D10">
+        </button>
+        <button class="diceContainer button">
+            <img src="./assets/Dice 12.svg" alt="D12">
+        </button>
+        <button class="diceContainer button">
+            <img src="./assets/Dice 20.svg" alt="D20">
+        </button>
+        <button class="diceContainer button">
+            <img src="./assets/Dice 100.svg" alt="D100">
+        </button> 
     </div>
 
     <!-- dice results -->
     <div class="diceResults">
-        <p class="results"></p>
-        <button class="roll"></button>
-        <button class="diceHistory"></button>
+        <button  class="roll button">Roll</button>
+        <p class="results">Results</p>
+
         <!-- UL list for drop down -->
     </div>
 
     <!-- search bar -->
     <form action="" class="searchBar">
         <input type="text" name="" id="">
-        <button class="searchButton"></button>
+        <button class="searchButton">Spell Search</button>
     </form>
 
     <!-- spell info displayed -->
-    <div class="spellInfo dropdown is-active">
+    <div id="dropDown" class="spellInfo dropdown is-active">
         <!-- dependent on css framework or a table -->
         <div class="dropdown-trigger">
-            <button class="button" aria-haspopup="false" aria-controls="dropdown-menu">
-              <span>Dropdown button</span>
+            <button class="button rollHistory" aria-haspopup="false" aria-controls="dropdown-menu">Roll History</button>
               <span class="icon is-small">
                 <i class="fas fa-dice-d8" aria-hidden="true"></i>
               </span>
             </button>
           </div>
           <div class="dropdown-menu" id="dropdown-menu" role="menu">
-            <div class="dropdown-content">
-              <a href="#" class="dropdown-item">
-                refrence element / place holder
-              </a>
-            </div>
+
           </div>
     </div>
     
     <!-- footer -->
     <footer>
-        <p>idk</p>
+
+        <p>D&D Spell Tool by Jose Orozco, Grey Pearson, Amanda Paul, and Nathan Wood. The source is licensed MIT. The website content is license CC BY NC SA 4.0.</p>
+
     </footer>
 
 </body>
