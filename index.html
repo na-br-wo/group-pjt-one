@@ -18,58 +18,40 @@
     <!-- header -->
     <header class="mainHeader">D&D Spell Tool</header>
 
+    <!-- search bar -->
+    <div class="searchBarWrapper">
+        <input type="text"  id="search">
+        <button class="searchButton" id="search-button">Spell Search</button>
+    </div>
+    
     <!-- dice icons -->
     <div class="diceSet">
-        <button class="diceContainer button">
+        <button class="diceContainer button" id="D4">
             <img src="./assets/images/Dice 4.svg" alt="D4">
         </button>
-        <button class="diceContainer button">
+        <button class="diceContainer button" id="D6">
             <img src="./assets/images/Dice 6.svg" alt="D6">
         </button>
-        <button class="diceContainer button">
+        <button class="diceContainer button" id="D8">
             <img src="./assets/images/Dice 8.svg" alt="D8">
         </button>
-        <button class="diceContainer button">
+        <button class="diceContainer button" id="D10">
             <img src="./assets/images/Dice 10.svg" alt="D10">
         </button>
-        <button class="diceContainer button">
+        <button class="diceContainer button" id="D12">
             <img src="./assets/images/Dice 12.svg" alt="D12">
         </button>
-        <button class="diceContainer button">
+        <button class="diceContainer button" id="D20">
             <img src="./assets/images/Dice 20.svg" alt="D20">
         </button>
-        <button class="diceContainer button">
+        <button class="diceContainer button" id="D100">
             <img src="./assets/images/Dice 100.svg" alt="D100">
         </button>
     </div>
 
     <!-- dice results -->
     <div class="diceResults">
-        <button  class="roll button">Roll</button>
         <p class="results">Dice Rolls</p>
-
-        <!-- UL list for drop down -->
-    </div>
-
-    <!-- search bar -->
-    <div class="searchBarWrapper">
-        <input type="text"  id="search">
-        <button class="searchButton" id="search-button">Spell Search</button>
-    </div>
-
-    <!-- spell info displayed -->
-    <div id="dropDown" class="spellInfo dropdown is-active">
-        <!-- dependent on css framework or a table -->
-        <div class="dropdown-trigger">
-            <button class="button rollHistory" aria-haspopup="false" aria-controls="dropdown-menu">Roll History</button>
-              <span class="icon is-small">
-                <i class="fas fa-dice-d8" aria-hidden="true"></i>
-              </span>
-            </button>
-          </div>
-          <div class="dropdown-menu" id="dropdown-menu" role="menu">
-
-          </div>
     </div>
 
     <!-- footer -->
