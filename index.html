@@ -14,16 +14,30 @@
     <script defer src="assets/script.js"></script>
 </head>
 <body>
-
     <!-- header -->
     <header class="mainHeader">D&D Spell Tool</header>
 
     <!-- search bar -->
     <div class="searchBarWrapper">
-        <input type="text"  id="search">
-        <button class="searchButton" id="search-button">Spell Search</button>
+        <input type="text" placeholder="Search for spells..." id="search">
+        <button class="searchButton" id="search-button">
+            <img alt="Search" class="search-icon" src="/assets/images/search.svg" />
+        </button>
     </div>
-    
+
+    <div class="box" id="spell-card">
+        <h2 id="spell-title" class="has-text-centered"></h2>
+        <p id="spell-description"></p>
+    </div>
+
+    <!-- nate's css search bar
+                <div class="searchBarWrapper">
+                    <input type="text" placeholder="Search for some spells..." id="search">
+                    <button class="searchButton" id="search-button">
+                        <img src="./assets/images/search.svg" alt="Search" class="search-icon">
+                    </button>
+                </div>
+                -->
     <!-- dice icons -->
     <div class="diceSet">
         <button class="diceContainer button" id="D4">
@@ -56,35 +70,31 @@
         <!-- UL list for drop down -->
     </div>
 
-    <!-- search bar -->
-    <div class="searchBarWrapper">
-        <input type="text" placeholder="Search for some spells..." id="search">
-        <button class="searchButton" id="search-button">
-            <img src="./assets/images/search.svg" alt="Search" class="search-icon">
-        </button>
-    </div>
+
 
     <!-- spell info displayed -->
     <div id="dropDown" class="spellInfo dropdown is-active">
         <!-- dependent on css framework or a table -->
         <div class="dropdown-trigger">
             <button class="button rollHistory" aria-haspopup="false" aria-controls="dropdown-menu">Roll History</button>
-              <span class="icon is-small">
+            <span class="icon is-small">
                 <i class="fas fa-dice-d8" aria-hidden="true"></i>
-              </span>
+            </span>
             </button>
-          </div>
-          <div class="dropdown-menu" id="dropdown-menu" role="menu">
+        </div>
+        <div class="dropdown-menu" id="dropdown-menu" role="menu">
 
-          </div>
+        </div>
     </div>
 
     <!-- footer -->
     <footer>
 
-        <p>D&D Spell Tool by Jose Orozco, Grey Pearson, Amanda Paul, and Nathan Wood. The source is licensed MIT. The website content is license CC BY NC SA 4.0.</p>
+        <p>D&D Spell Tool by Jose Orozco, Grey Pearson, Amanda Paul, and Nathan Wood. The source is licensed MIT. The
+            website content is license CC BY NC SA 4.0.</p>
 
     </footer>
+   
 
 </body>
 </html>

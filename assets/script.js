@@ -11,6 +11,8 @@
 // inputs for the search-bar
 let searchInput = document.getElementById('search');
 let searchBtnClick = document.getElementById('search-button');
+let spellTitleEl = document.getElementById('spell-title');
+let spellDescriptionEl = document.getElementById('spell-description');
 
 // event listener to create drop-down menu when user types anything
 // in search bar
@@ -62,6 +64,8 @@ function spellSearch(spell) {
 
   fetch(spells_api_url).then(res => res.json()).then(spellData => {
     console.log(spellData);
+    spellTitleEl.textContent = spellData.name;
+    spellDescriptionEl.textContent = spellData.desc;
   });
 
 }
