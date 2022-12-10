@@ -80,3 +80,5 @@ function showGif() {
     gifContainer.removeChild(img);
   }, 2000);
 }
+
+

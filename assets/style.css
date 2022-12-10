@@ -36,9 +36,10 @@ body {
     float:left;
     width: 14%;
     height: auto;
-    padding: 7px;
+    padding: 0;
     background-color: white;
     border: none;
+    background: none;
 }
 
 .rollHistory {
@@ -154,7 +155,7 @@ footer {
     height: 100%;}
   
     
-/* search bar*/
+/* search bar */
     
     .searchBarWrapper{
         position: relative;
@@ -203,6 +204,21 @@ footer {
         opacity: 0;
         z-index: -1;
     }
+
+    /*button animation*/
+
+    .diceContainer:hover {
+        animation: scale-up 0.5s;
+      }
+      
+      @keyframes scale-up {
+        from {
+            transform: scale(1);
+        }
+        to {
+            transform: scale(1.5);
+        }
+      }
 
     
     
