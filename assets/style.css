@@ -99,9 +99,6 @@ body {
  
 /*spell card*/
 
-
-
-
 .spell-card {
     width: 50%;
     align-self: center;
@@ -112,6 +109,9 @@ body {
     padding: 5%;
     overflow-y: scroll;
     height: 200px;
+}
+.spell-title {
+    
 }
 
 
