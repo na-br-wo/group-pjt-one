@@ -65,3 +65,20 @@ function spellSearch(spell) {
   });
 
 }
+
+
+// gif showing
+
+function showGif() {
+  const img = document.createElement('img');
+  img.src = 'https://media.giphy.com/media/dHmlDXivhdfcrkCgYq/giphy.gif'; // URL of the GIF
+  
+  // show the GIF for 2 seconds
+  const gifContainer = document.getElementById('gif-container');
+  gifContainer.appendChild(img);
+  setTimeout(() => {
+    gifContainer.removeChild(img);
+  }, 2000);
+}
+
+
