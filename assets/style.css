@@ -22,6 +22,7 @@ body {
     align-items: center;
     flex-wrap: wrap;
     flex-direction: row;
+    
 }
 
 .diceSet {
@@ -30,6 +31,7 @@ body {
     display: flex;
     flex-direction: row;
     align-self: center;
+    
 }
 
 .diceContainer {
@@ -40,6 +42,7 @@ body {
     background-color: white;
     border: none;
     background: none;
+    
 }
 
 .rollHistory {
