@@ -16,41 +16,49 @@
 <body>
 
     <!-- header -->
-    <header class="mainHeader">D&D Spell Tool</header>
+    <header class="mainHeader box">D&D Spell Tool</header>
 
     <!-- search bar -->
-    <div class="searchBarWrapper">
-        <input type="text"  id="search">
-        <button class="searchButton" id="search-button">Spell Search</button>
-    </div>
+   
+    <div class="searchBarWrapper box">
+         
+        <form name="search">
+            <input type="text" class="input" name="txt" onmouseout="this.value = ''; this.blur();">
+        </form>
+        <i class="fas fa-search"></i>
     
-    <!-- dice icons -->
-    <div class="diceSet">
-        <button class="diceContainer button" id="D4">
+    </div> 
+    <div class="spell-card box" id="spell-card">
+        <h2 id="spell-title" class="has-text-centered"></h2>
+        <p id="spell-description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quo, sint maxime recusandae voluptates, adipisci dolores aliquid cum non asperiores hic corporis voluptate voluptas quasi assumenda quam impedit incidunt nihil! Lorem ipsum dolor sit, amet consectetur adipisicing elit. A nisi similique blanditiis obcaecati ad deserunt maxime voluptatibus expedita, esse officiis architecto optio rerum vitae perferendis laborum accusantium cum libero asperiores? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto eius cupiditate accusantium nulla, nobis pariatur ut at illo odit aut neque illum totam recusandae necessitatibus eligendi repudiandae vitae incidunt quas! Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga magnam ea, voluptatibus ipsum iusto cum ad laudantium corporis, recusandae quas ipsam aspernatur veniam cumque earum eaque adipisci nisi quaerat in. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit quo culpa animi iusto a nobis recusandae, dolorem harum qui nihil libero unde pariatur dolorum atque, in reiciendis! At, unde sapiente!</p>
+    </div>
+
+    <div class="diceSet box">
+        <button onclick="showGif()" class="diceContainer button" id="D4">
             <img src="./assets/images/Dice 4.svg" alt="D4">
         </button>
-        <button class="diceContainer button" id="D6">
+        <button onclick="showGif()" class="diceContainer button" id="D6">
             <img src="./assets/images/Dice 6.svg" alt="D6">
         </button>
-        <button class="diceContainer button" id="D8">
+        <button onclick="showGif()" class="diceContainer button" id="D8">
             <img src="./assets/images/Dice 8.svg" alt="D8">
         </button>
-        <button class="diceContainer button" id="D10">
+        <button onclick="showGif()" class="diceContainer button" id="D10">
             <img src="./assets/images/Dice 10.svg" alt="D10">
         </button>
-        <button class="diceContainer button" id="D12">
+        <button onclick="showGif()" class="diceContainer button" id="D12">
             <img src="./assets/images/Dice 12.svg" alt="D12">
         </button>
-        <button class="diceContainer button" id="D20">
+        <button onclick="showGif()" class="diceContainer button" id="D20">
             <img src="./assets/images/Dice 20.svg" alt="D20">
         </button>
-        <button class="diceContainer button" id="D100">
+        <button onclick="showGif()" class="diceContainer button" id="D100">
             <img src="./assets/images/Dice 100.svg" alt="D100">
         </button>
     </div>
-
+    <div id="gif-container"><h1></h1></div>
     <!-- dice results -->
-    <div class="diceResults">
+    <div class="diceResults box">
         <p class="results">Dice Rolls</p>
     </div>
 
