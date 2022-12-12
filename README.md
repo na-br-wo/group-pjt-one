@@ -9,7 +9,9 @@ This website allows users to search a list of Dungeon's and Dragons 5th Edition 
 -[Random Number API](https://www.randomnumberapi.com/)
 
 -[D&D5e API](https://www.dnd5eapi.co/docs/#overview--schemas)
+***
 
+Here is a [link](https://na-br-wo.github.io/group-pjt-one/) to the deployed application if you wish to view functionality.
 
 ## Usage
 
