@@ -15,12 +15,9 @@ This website allows users to search a list of Dungeon's and Dragons 5th Edition 
 
 The Spell Tool is browser-based. Simply type a D&D 5e spell into the search bar to display its information, then click the appropriate dice to generate random rolls.
 
-  
-    ![Search Screenshot](assets/images/screenshots/screenshot_1.png)
+![Search Screenshot](./assets/images/screenshots/screenshot_1.png)
  
-    
-
-    ![Roll Screenshot](assets/images/screenshots/screenshot_2.png)
+![Roll Screenshot](./assets/images/screenshots/screenshot_2.png)
 
 
 ## Credits
