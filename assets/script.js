@@ -58,7 +58,7 @@ function spellSearch(spell) {
 
 function test(num) {
 
-  let APIurl = 'http://www.randomnumberapi.com/api/v1.0/random?min=1&max=' + num + '&count=1'
+  let APIurl = 'https://www.randomnumberapi.com/api/v1.0/random?min=1&max=' + num + '&count=1'
   let result = 'ah'
 
   fetch(APIurl)
