@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,15 +9,17 @@
     <!-- bulma links -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <!-- update kit to include more relevent icons (grey) -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <!-- css & js -->
     <link rel="stylesheet" href="assets/style.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@dice-roller/rpg-dice-roller@VERSION/lib/umd/bundle.min.js"></script> -->
     <script defer src="assets/script.js"></script>
 </head>
+
 <body>
     <!-- header -->
     <header class="mainHeader box">D&D Spell Tool</header>
-
     <!-- search bar -->
     <div class="searchBarWrapper box">
         <input type="text" placeholder="Search for spells..." id="search">
@@ -24,44 +27,49 @@
             Search
         </button>
     </div>
-
     <div class="box" id="spell-card">
         <h2 id="spell-title"></h2>
         <p id="spell-description"></p>
     </div>
-
     <div class="diceSet box">
-        <button onclick="showGif()" class="diceContainer button" id="D4">
+        <button onclick="test(4)" class="diceContainer button" id="D4">
             <img src="./assets/images/Dice 4.svg" alt="D4">
         </button>
-        <button onclick="showGif()" class="diceContainer button" id="D6">
+        <button onclick="test(6)" class="diceContainer button" id="D6">
             <img src="./assets/images/Dice 6.svg" alt="D6">
         </button>
-        <button onclick="showGif()" class="diceContainer button" id="D8">
+        <button onclick="test(8)" class="diceContainer button" id="D8">
             <img src="./assets/images/Dice 8.svg" alt="D8">
         </button>
-        <button onclick="showGif()" class="diceContainer button" id="D10">
+        <button onclick="test(10)" class="diceContainer button" id="D10">
             <img src="./assets/images/Dice 10.svg" alt="D10">
         </button>
-        <button onclick="showGif()" class="diceContainer button" id="D12">
+        <button onclick="test(12)" class="diceContainer button" id="D12">
             <img src="./assets/images/Dice 12.svg" alt="D12">
         </button>
-        <button onclick="showGif()" class="diceContainer button" id="D20">
+        <button onclick="test(20)" class="diceContainer button" id="D20">
             <img src="./assets/images/Dice 20.svg" alt="D20">
         </button>
-        <button onclick="showGif()" class="diceContainer button" id="D100">
+        <button onclick="test(100)" class="diceContainer button" id="D100">
             <img src="./assets/images/Dice 100.svg" alt="D100">
         </button>
     </div>
-    <div id="gif-container"><h1></h1></div>
+    <div id="gif-container">
+        <h1></h1>
+    </div>
     <!-- dice results -->
     <div class="diceResults box">
         <p class="results">Dice Rolls</p>
-
+        <div id="myModal" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+                <p id="resultModal"></p>
+                <span id="close" class="close">&times;</span>
+            </div>
+        </div>
+        <div id="history" class="history"></div>
         <!-- UL list for drop down -->
     </div>
-
-
 
     <!-- spell info displayed -->
     <div id="dropDown" class="spellInfo dropdown is-active">
@@ -74,18 +82,12 @@
             </button>
         </div>
         <div class="dropdown-menu" id="dropdown-menu" role="menu">
-
         </div>
     </div>
-
     <!-- footer -->
     <footer>
-
         <p>D&D Spell Tool by Jose Orozco, Grey Pearson, Amanda Paul, and Nathan Wood. The source is licensed MIT. The
             website content is license CC BY NC SA 4.0.</p>
-
     </footer>
-   
-
 </body>
 </html>
