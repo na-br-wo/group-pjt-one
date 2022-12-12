@@ -14,23 +14,20 @@
     <script defer src="assets/script.js"></script>
 </head>
 <body>
-
     <!-- header -->
     <header class="mainHeader box">D&D Spell Tool</header>
 
     <!-- search bar -->
-   
-    <div class="searchBarWrapper box">
-         
-        <form name="search">
-            <input type="text" class="input" name="txt" onmouseout="this.value = ''; this.blur();">
-        </form>
-        <i class="fas fa-search"></i>
-    
-    </div> 
-    <div class="spell-card box" id="spell-card">
-        <h2 id="spell-title" class="title"> </h2> 
-        <p id="spell-description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quo, sint maxime recusandae voluptates, adipisci dolores aliquid cum non asperiores hic corporis voluptate voluptas quasi assumenda quam impedit incidunt nihil! Lorem ipsum dolor sit, amet consectetur adipisicing elit. A nisi similique blanditiis obcaecati ad deserunt maxime voluptatibus expedita, esse officiis architecto optio rerum vitae perferendis laborum accusantium cum libero asperiores? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto eius cupiditate accusantium nulla, nobis pariatur ut at illo odit aut neque illum totam recusandae necessitatibus eligendi repudiandae vitae incidunt quas! Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga magnam ea, voluptatibus ipsum iusto cum ad laudantium corporis, recusandae quas ipsam aspernatur veniam cumque earum eaque adipisci nisi quaerat in. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit quo culpa animi iusto a nobis recusandae, dolorem harum qui nihil libero unde pariatur dolorum atque, in reiciendis! At, unde sapiente!</p>
+    <div class="searchBarWrapper">
+        <input type="text" placeholder="Search for spells..." id="search">
+        <button class="searchButton" id="search-button">
+            <img alt="Search" class="search-icon" src="/assets/images/search.svg" />
+        </button>
+    </div>
+
+    <div class="box" id="spell-card">
+        <h2 id="spell-title" class="has-text-centered"></h2>
+        <p id="spell-description"></p>
     </div>
 
     <div class="diceSet box">
@@ -60,14 +57,35 @@
     <!-- dice results -->
     <div class="diceResults box">
         <p class="results">Dice Rolls</p>
+
+        <!-- UL list for drop down -->
+    </div>
+
+
+
+    <!-- spell info displayed -->
+    <div id="dropDown" class="spellInfo dropdown is-active">
+        <!-- dependent on css framework or a table -->
+        <div class="dropdown-trigger">
+            <button class="button rollHistory" aria-haspopup="false" aria-controls="dropdown-menu">Roll History</button>
+            <span class="icon is-small">
+                <i class="fas fa-dice-d8" aria-hidden="true"></i>
+            </span>
+            </button>
+        </div>
+        <div class="dropdown-menu" id="dropdown-menu" role="menu">
+
+        </div>
     </div>
 
     <!-- footer -->
     <footer>
 
-        <p>D&D Spell Tool by Jose Orozco, Grey Pearson, Amanda Paul, and Nathan Wood. The source is licensed MIT. The website content is license CC BY NC SA 4.0.</p>
+        <p>D&D Spell Tool by Jose Orozco, Grey Pearson, Amanda Paul, and Nathan Wood. The source is licensed MIT. The
+            website content is license CC BY NC SA 4.0.</p>
 
     </footer>
+   
 
 </body>
 </html>
