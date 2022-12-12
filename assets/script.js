@@ -1,11 +1,4 @@
 
-// var dropdown = document.querySelector('.dropdown');
-// dropdown.addEventListener('click', function(event) {
-//   event.stopPropagation();
-//   dropdown.classList.toggle('is-active');
-// });
-
-
 /* adding scripting for spell search API */
 
 // inputs for the search-bar
@@ -13,30 +6,22 @@ let searchInput = document.getElementById('search');
 let searchBtnClick = document.getElementById('search-button');
 let spellTitleEl = document.getElementById('spell-title');
 let spellDescriptionEl = document.getElementById('spell-description');
-
-// event listener to create drop-down menu when user types anything
-// in search bar
-
-// searchInput.addEventListener('input', (e) => {
-//   const value = e.target.value;
-//   console.log(value);
-// })
+let modal = document.getElementById("myModal");
+let span = document.getElementById("close");
+let resultModal = document.getElementById('resultModal')
+let history = document.getElementById('history')
 
 // search function that happens when user clicks search button
 searchBtnClick.addEventListener('click', (e) => {
   // preventing refresh of page on button click
   e.preventDefault();
-
-
   // taking user input in search bar, replacing any hyphens with spaces
   // so hyphenated search can be appended to API link
   let inputArray = searchInput.value;
   let removeSpace = inputArray.split(" ");
   let addHyphen = removeSpace.join("-");
   let caseCorrect = addHyphen.toLowerCase();
-
-
-
+  // running spellsearch function (calling API)
   spellSearch(caseCorrect);
 });
 
@@ -52,7 +37,7 @@ searchInput.addEventListener('keypress', (search) => {
     let addHyphen = removeSpace.join("-");
     let caseCorrect = addHyphen.toLowerCase();
 
-    // console.log(q);
+    // running spellSearch function (calling API)
     spellSearch(caseCorrect);
   }
 })
@@ -71,18 +56,48 @@ function spellSearch(spell) {
 }
 
 
-// gif showing
+function test(num) {
 
-function showGif() {
+  let APIurl = 'http://www.randomnumberapi.com/api/v1.0/random?min=1&max=' + num + '&count=1'
+  let result = 'ah'
+
+  fetch(APIurl)
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data)
+      modal.style.display = "block";
+      result = 'D' + num + ' = ' + data
+      resultModal.innerHTML = 'You rolled ' + result
+      createResult(result)
+    })
+}
+
+// seprate function outside of fetch func to keep code readable
+function createResult(result) {
+
+  const element = document.createElement('div')
+  element.classList.add("box")
+  element.innerHTML = result
+  history.appendChild(element);
+}
+
+// runs best outside of fetch func
+span.onclick = function () {
+  modal.style.display = "none";
+}
+
+
+// gif showing
+let diceContainer = document.getElementsByClassName('diceContainer')
+
+diceContainer.addEventListener('click', (event) => {
   const img = document.createElement('img');
   img.src = 'https://media.giphy.com/media/dHmlDXivhdfcrkCgYq/giphy.gif'; // URL of the GIF
-  
+
   // show the GIF for 2 seconds
   const gifContainer = document.getElementById('gif-container');
   gifContainer.appendChild(img);
   setTimeout(() => {
     gifContainer.removeChild(img);
   }, 2000);
-}
-
-
+}) 
